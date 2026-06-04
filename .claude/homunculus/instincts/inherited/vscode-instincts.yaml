@@ -1,0 +1,465 @@
+# Instincts generated from https://github.com/cvsz/vscode
+# Generated: 2026-06-04T20:55:18.284Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: vscode-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: build
+
+## Evidence
+
+- 1 commits analyzed
+- Detected conventional commit pattern
+- Examples: build(deps): bump the npm_and_yarn group across 22 directories with 11 updates
+
+---
+id: vscode-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Commit Length
+
+## Action
+
+Write moderate-length commit messages (~78 characters)
+
+## Evidence
+
+- Average commit message length: 78 chars
+- Based on 1 commits
+
+---
+id: vscode-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: vscode-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: vscode-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: vscode-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: vscode-test-framework
+trigger: "when writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Test Framework
+
+## Action
+
+Use mocha as the test framework
+
+## Evidence
+
+- Test framework detected: mocha
+- File pattern: *.test.ts
+
+---
+id: vscode-test-naming
+trigger: "when creating a test file"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Test Naming
+
+## Action
+
+Name test files using the pattern: *.test.ts
+
+## Evidence
+
+- File pattern: *.test.ts
+- Consistent across test files
+
+---
+id: vscode-test-types
+trigger: "when planning tests for a feature"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Test Types
+
+## Action
+
+Write unit, integration tests to match project standards
+
+## Evidence
+
+- Test types detected: unit, integration
+- Coverage config: yes
+
+---
+id: vscode-workflow-multi-package-dependency-upgrade
+trigger: "when doing multi package dependency upgrade"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cvsz/vscode
+---
+
+# Vscode Workflow Multi Package Dependency Upgrade
+
+## Action
+
+Follow the multi-package-dependency-upgrade workflow:
+1. Identify outdated dependencies in multiple packages/submodules.
+2. Update package.json and package-lock.json files in each affected directory.
+3. Summarize changes in the commit message, often with tables and changelog links.
+4. List all updated dependencies and affected directories.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: */package.json, */package-lock.json, package.json
+
+---
+id: vscode-instinct-file-naming
+trigger: "When creating or renaming a file in the codebase"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct File Naming
+
+## Action
+
+Use kebab-case for file names
+
+## Evidence
+
+- Pattern in files: consistent kebab-case naming in TypeScript files
+
+---
+id: vscode-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in TypeScript code: function names use camelCase
+
+---
+id: vscode-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in TypeScript code: class names use PascalCase
+
+---
+id: vscode-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in TypeScript code: constants use SCREAMING_SNAKE_CASE
+
+---
+id: vscode-instinct-import-style
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in TypeScript files: imports use relative paths
+
+---
+id: vscode-instinct-export-style
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in TypeScript files: named exports are standard
+
+---
+id: vscode-instinct-test-file-pattern
+trigger: "When adding a new test file"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Test File Pattern
+
+## Action
+
+Name the file with a .test.ts suffix
+
+## Evidence
+
+- Pattern: test files follow *.test.ts
+- Seen in test/ directory
+
+---
+id: vscode-instinct-test-framework
+trigger: "When writing tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Test Framework
+
+## Action
+
+Use the Mocha testing framework
+
+## Evidence
+
+- Pattern: Mocha specified as framework
+- Seen in test config files
+
+---
+id: vscode-instinct-test-type
+trigger: "When organizing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Test Type
+
+## Action
+
+Include both unit and integration tests
+
+## Evidence
+
+- Pattern: testTypes include unit and integration
+
+---
+id: vscode-instinct-test-location
+trigger: "When placing test files"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Test Location
+
+## Action
+
+Place tests in a separate test directory
+
+## Evidence
+
+- Architecture: testLocation is separate
+- Pattern in folder structure
+
+---
+id: vscode-instinct-commit-format
+trigger: "When composing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Commit Format
+
+## Action
+
+Use conventional commit format with a type prefix (e.g., build, feat, fix)
+
+## Evidence
+
+- Pattern: conventional commits
+- Example: build(deps): bump the npm_and_yarn group...
+
+---
+id: vscode-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, averaging around 78 characters
+
+## Evidence
+
+- Pattern: average commit length is 78
+
+---
+id: vscode-instinct-multi-package-dependency-upgrade
+trigger: "When dependencies need to be updated across multiple package.json files in the monorepo"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: cvsz/vscode
+---
+
+# Vscode Instinct Multi Package Dependency Upgrade
+
+## Action
+
+Update all affected package.json and package-lock.json files, summarize changes in the commit message with tables/changelog links, and list updated dependencies and directories
+
+## Evidence
+
+- Workflow: multi-package-dependency-upgrade
+- Pattern: commits with build(deps): bump ...
+- Files: */package.json, */package-lock.json
+
