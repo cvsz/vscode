@@ -31,7 +31,7 @@
 		"yaml": "^2.8.0"
 	},
 	"devDependencies": {
-		"@anthropic-ai/sdk": "^0.91.1",
+		"@anthropic-ai/sdk": "^0.100.1",
 		"@octokit/types": "^14.1.0",
 		"@types/node": "^22.16.3",
 		"copyfiles": "^2.4.1",
@@ -41,7 +41,7 @@
 		"rimraf": "^6.0.1",
 		"tsx": "^4.20.3",
 		"typescript": "^5.8.3",
-		"vitest": "^3.0.5"
+		"vitest": "^4.1.0"
 	},
 	"keywords": [
 		"chat",
