@@ -7124,8 +7124,8 @@
     "zod": "3.25.76"
   },
   "dependencies": {
-    "@anthropic-ai/claude-agent-sdk": "0.2.112",
-    "@anthropic-ai/sdk": "^0.82.0",
+    "@anthropic-ai/claude-agent-sdk": "0.2.141",
+    "@anthropic-ai/sdk": "^0.105.0",
     "@github/blackbird-external-ingest-utils": "^0.3.0",
     "@github/copilot": "^1.0.63",
     "@google/genai": "^1.22.0",
@@ -7162,7 +7162,7 @@
     "isbinaryfile": "^5.0.4",
     "jsonc-parser": "^3.3.1",
     "lru-cache": "^11.1.0",
-    "markdown-it": "^14.1.1",
+    "markdown-it": "^14.2.0",
     "minimatch": "^10.2.1",
     "undici": "^7.24.1",
     "vscode-tas-client": "^0.1.84",
